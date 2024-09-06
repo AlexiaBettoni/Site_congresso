@@ -4,25 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Congress Website</title>
-    <link rel="icon" href="logo.jpeg">
+    <link rel="icon" href="assets\img\logo.jpeg">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <img src="logo.jpeg" alt="Logo do congresso" class="logo">
+        <img src="assets\img\logo.jpeg" alt="Logo do congresso" class="logo">
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Welcome to the Congress</h1>
-            <p>Join us for an inspiring and informative event.</p>
+            <h1>Sobre o COFAM</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
         </div>
     </section>
+    
+    <section class="fotos">
+        <div class="fotos_box">
+            <img src="assets\img\pato.jpeg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="fotos_box">
+            <img src="assets\img\pato.jpeg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="fotos_box">
+            <img src="assets\img\pato.jpeg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="fotos_box">
+            <img src="assets\img\pato.jpeg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="fotos_box">
+            <img src="assets\img\pato.jpeg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="fotos_box">
+            <img src="assets\img\pato.jpeg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </section>
+
+    <div class="countdown-section">
+        <div class="countdown-title">Contagem regressiva</div>
+        <div class="countdown-timer" id="countdown">
+          <span id="days">00</span> Dias
+          <span id="hours">00</span> Horas
+          <span id="minutes">00</span> Minutos
+        </div>
+    </div>
     <section class="botoes">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdixE5yiENieSi5G9MLrcbvoYbjgBF8mP7e4HHqW0w7EizZVA/viewform?usp=sf_link" target="_blank"><button>Link para inscrição</button></a>
         <a href="" target="_blank"><button>Link para inscrição</button></a>
     </section>
+s
+    <h2>Patrocinadore</h2>
+    <section class="patrocinadores">
+        <img src="assets\img\pato.jpeg" alt="">
+        <img src="assets\img\pato.jpeg" alt="">
+        <img src="assets\img\pato.jpeg" alt="">
+        <img src="assets\img\pato.jpeg" alt="">
+        <img src="assets\img\pato.jpeg" alt="">
+    </section>
+
+    
+
+    <script>
+        // Set the date we're counting down to
+        const eventDate = new Date("Dec 31, 2024 23:59").getTime();
+    
+        // Update the countdown every 1 second
+        const countdownFunction = setInterval(function () {
+    
+          // Get current date and time
+          const now = new Date().getTime();
+    
+          // Find the distance between now and the event date
+          const distance = eventDate - now;
+    
+          // Time calculations for days, hours, minutes, and seconds
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    
+          // Output the result in the countdown timer element
+          document.getElementById("days").innerHTML = days;
+          document.getElementById("hours").innerHTML = hours;
+          document.getElementById("minutes").innerHTML = minutes;
+    
+          // If the countdown is over, display a message
+          if (distance < 0) {
+            clearInterval(countdownFunction);
+            document.getElementById("countdown").innerHTML = "Event Started!";
+          }
+        }, 1000);
+    </script>
 </body>
 </html>
