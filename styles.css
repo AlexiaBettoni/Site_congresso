@@ -1,37 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
 
 :root{
-    --text: #060808;
-    --b0: #C6EAF4;
-    --b2: #0096CC;
-    --b3: rgb(28, 96, 141);
-    --white: #FEFEFE;
-    --b1: #518DC6;
+    --white: #fff;
+    --azul50: #f2f7fb;
+    --azul100: #e0eef9;
+    --azul200: #c8e2f5;
+    --azul300: #a2d1ee;
+    --azul400: #75b7e5;
+    --azul500: #5a9edd;
+    --azul600: #4181cf;
+    --azul700: #376dbe;
+    --azul800: #325a9b;
+    --azul900: #2d4c7b;
+    --azul950: #233756;
+    --text: #0e0f11;
+    --background: #f5f6f9;
+    --primary: #4a69c3;
+    --secondary: #8da6eb;
+    --accent: #4b78f6;
+
 }
 
 /* Base Styles */
 body {
     font-family: "Mukta", system-ui;
+    background-color: var(--background);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/*--------------------- header ---------------------*/
 header {
     background-color: var(--white);
     padding: 20px 0;
     text-align: center;
     max-height: 200px;
 }
-
 .logo {
-    max-width: 150px;
+    max-height: 45px;
+    width: auto;
 }
 
+/*--------------------- hero ---------------------*/
 .hero {
-    background: rgb(198,234,244);
-    background: linear-gradient(90deg, rgba(198,234,244,1) 0%, rgba(141,194,245,1) 50%, rgba(198,234,244,1) 100%);
-    padding: 100px 0;
+    background: var(--azul900);
+    padding: 30px 0;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -40,21 +53,24 @@ header {
 .hero h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    color: var(--azul50);
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 1em;
     margin-bottom: 40px;
     max-width: 500px;
     text-align: center;
+    color: var(--azul50);
 }
 
+/*--------------------- botoes ---------------------*/
 button {
     margin: 10px 15px;
     border-style: none;
     display: inline-block;
     padding: 15px 25px;
-    background-color: var(--b1);
+    background-color: var(--azul700);
     color: var(--white);
     text-decoration: none;
     font-size: 1em;
@@ -62,7 +78,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--b2);
+    background-color: var(--azul800);
 }
 
 .botoes{
@@ -72,10 +88,12 @@ button:hover {
     flex-wrap: wrap;
 }
 
+/*--------------------- fotos ---------------------*/
 .fotos{
     display: flex;
     margin: 30px 0;
     overflow-x: scroll;
+    margin: 45px 10vw;
 }
 .fotos_box{
     display: flex;
@@ -87,12 +105,49 @@ button:hover {
     font-size: 0.8rem;
 }
 .fotos_box img{
-    width: 160px;
-    height: 160px;
-    object-fit: contain;
+    height: 200px;
+    width: auto;
+    object-fit: scale-down;
+    border-radius: 10px;
+}
+.fotos::-webkit-scrollbar {
+    width: 10px;    
 }
 
+/* Track */
+.fotos::-webkit-scrollbar-track {
+    background: var(--azul200);
+    border-radius: 10px;
+}
+
+/* Handle */
+.fotos::-webkit-scrollbar-thumb {
+    background: var(--azul500);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.fotos::-webkit-scrollbar-thumb:hover {
+    background: var(--azul600);
+}
+
+
+
+/*--------------------- patrocinadores ---------------------*/
+.patrocinio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10vw;
+    margin-bottom: 30px;  
+}
+.patrocinio h2{
+    font-size: 2rem;
+    color: var(--azul900);
+}
 .patrocinadores{
+    background-color: var(--white);
+    border-radius: 16px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -103,15 +158,16 @@ button:hover {
     margin: 15px;
     object-fit: contain;
 }
+
+/*--------------------- contagem ---------------------*/
 .countdown-section {
-    background-color: var(--b3);
+    background-color: var(--azul950);
     display: flex;
     padding: 20px;
     color: var(--white);
     flex-direction: column;
     align-items: center;
 }
-
 .countdown-title {
     font-size: 24px;
     margin-bottom: 20px;
