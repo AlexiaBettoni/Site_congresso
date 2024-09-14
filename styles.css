@@ -1,33 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
     --white: #fff;
-    --azul50: #f2f7fb;
-    --azul100: #e0eef9;
-    --azul200: #c8e2f5;
-    --azul300: #a2d1ee;
-    --azul400: #75b7e5;
-    --azul500: #5a9edd;
-    --azul600: #4181cf;
-    --azul700: #376dbe;
-    --azul800: #325a9b;
-    --azul900: #2d4c7b;
-    --azul950: #233756;
     --text: #0e0f11;
+    --bluetext:#324786;
+    --hero:#2a3c70;
     --background: #f5f6f9;
     --primary: #4a69c3;
     --secondary: #8da6eb;
-    --accent: #4b78f6;
+    --third: #adc3ff;
+    --accent: #6782d3;
 
 }
 
 /* Base Styles */
 body {
-    font-family: "Mukta", system-ui;
+    font-family: "Poppins", sans-serif;
     background-color: var(--background);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+a{
+    font-weight: 700;
+    text-decoration: none;
 }
 /*--------------------- header ---------------------*/
 header {
@@ -43,7 +39,7 @@ header {
 
 /*--------------------- hero ---------------------*/
 .hero {
-    background: var(--azul900);
+    background: var(--hero);
     padding: 30px 0;
     text-align: center;
     display: flex;
@@ -53,15 +49,16 @@ header {
 .hero h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: var(--azul50);
+    color: var(--background);
 }
 
 .hero p {
     font-size: 1em;
+    font-weight: 400;
     margin-bottom: 40px;
     max-width: 500px;
     text-align: center;
-    color: var(--azul50);
+    color: var(--white);
 }
 
 /*--------------------- botoes ---------------------*/
@@ -70,7 +67,7 @@ button {
     border-style: none;
     display: inline-block;
     padding: 15px 25px;
-    background-color: var(--azul700);
+    background-color: var(--accent);
     color: var(--white);
     text-decoration: none;
     font-size: 1em;
@@ -78,7 +75,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--azul800);
+    background-color: var(--primary);
 }
 
 .botoes{
@@ -111,27 +108,20 @@ button:hover {
     border-radius: 10px;
 }
 .fotos::-webkit-scrollbar {
-    width: 10px;    
+    width: 6px;    
 }
 
 /* Track */
 .fotos::-webkit-scrollbar-track {
-    background: var(--azul200);
+    background: var(--third);
     border-radius: 10px;
 }
 
 /* Handle */
 .fotos::-webkit-scrollbar-thumb {
-    background: var(--azul500);
+    background: var(--secondary);
     border-radius: 10px;
 }
-
-/* Handle on hover */
-.fotos::-webkit-scrollbar-thumb:hover {
-    background: var(--azul600);
-}
-
-
 
 /*--------------------- patrocinadores ---------------------*/
 .patrocinio{
@@ -143,7 +133,7 @@ button:hover {
 }
 .patrocinio h2{
     font-size: 2rem;
-    color: var(--azul900);
+    color: var(--primary);
 }
 .patrocinadores{
     background-color: var(--white);
@@ -161,22 +151,48 @@ button:hover {
 
 /*--------------------- contagem ---------------------*/
 .countdown-section {
-    background-color: var(--azul950);
+    background-color: var(--third);
     display: flex;
-    padding: 20px;
-    color: var(--white);
+    padding: 30px 20px;
+    color: var(--bluetext);
     flex-direction: column;
     align-items: center;
 }
 .countdown-title {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
 .countdown-timer {
-    font-size: 40px;
-    color: var(--white);
+    font-size: 28px;
+    color: var(--bluetext);
+}
+
+/*--------------------- footer ---------------------*/
+footer{
+    background: var(--bluetext);
+    color: var(--background);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10vw;
+    align-items: center;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+}
+footer h4{
+    margin: 4px 0;
+}
+footer img{
+    border-radius: 50%;
+    width: 75px;
+    height: auto;
+}
+footer a{
+    text-decoration: none;
+    color: var(--background);
 }
 
 .countdown-timer span {
