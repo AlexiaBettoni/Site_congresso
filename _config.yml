@@ -1,0 +1,26 @@
+title: "Meu Site Jekyll"
+description: "Este é o meu site Jekyll, gerado automaticamente com GitHub Actions"
+
+baseurl: ""  # Defina como "/repositorio" se for necessário
+url: "https://alexiabettoni.github.io/Site_congresso/"
+
+source: .
+destination: ./_site
+
+exclude:
+  - LICENSE
+  - README.md
+
+include:
+  - main.html
+  - styles.css
+
+permalink: pretty
+
+plugins:
+  - jekyll-feed
+
+markdown: kramdown
+highlighter: rouge
+
+timezone: "America/Sao_Paulo"
