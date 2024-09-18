@@ -3,7 +3,7 @@
 :root{
     --white: #fff;
     --text: #0e0f11;
-    --bluetext:#324786;
+    --bluetext:#25376f;
     --hero:#2a3c70;
     --background: #f5f6f9;
     --primary: #4a69c3;
@@ -33,13 +33,13 @@ header {
     max-height: 200px;
 }
 .logo {
-    max-height: 45px;
+    max-height: 80px;
     width: auto;
 }
 
 /*--------------------- hero ---------------------*/
 .hero {
-    background: var(--hero);
+    background: linear-gradient(to right, var(--third), #adc3ff24, var(--third));
     padding: 30px 0;
     text-align: center;
     display: flex;
@@ -49,7 +49,7 @@ header {
 .hero h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: var(--background);
+    color: var(--bluetext);
 }
 
 .hero p {
@@ -58,7 +58,7 @@ header {
     margin-bottom: 40px;
     max-width: 500px;
     text-align: center;
-    color: var(--white);
+    color: var(--bluetext);
 }
 
 /*--------------------- botoes ---------------------*/
@@ -146,6 +146,20 @@ button:hover {
     width: 120px;
     height: 120px;
     margin: 15px;
+    object-fit: contain;
+}
+.apoiadores{
+    background-color: var(--white);
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+.apoiadores img{
+    width: 80px;
+    height: 80px;
+    margin: 10px;
     object-fit: contain;
 }
 
