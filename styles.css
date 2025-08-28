@@ -40,6 +40,13 @@ header {
     width: auto;
 }
 
+.logo2 {
+    height: 150px;   /* define a altura desejada */
+    width: auto;     /* mantém a proporção */
+}
+
+
+
 /*--------------------- hero ---------------------*/
 .hero {
     background: linear-gradient(to right, var(--third), #adc3ff24, var(--third));

@@ -11,13 +11,15 @@
     <!-- Header -->
     <header>
         <img src="assets\img\logo.png" alt="Logo do congresso" class="logo">
+        
+
     </header>
 
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <h1>Sobre o COFAM</h1>
-            <p>O Congresso de Oftalmologia para Acadêmicos de Medicina (COFAM) está realizando sua primeira edição no ano de 2024. Esse é um evento feito por acadêmicos para acadêmicos conseguirem apresentar relatos de caso, revisões literários, temas livres além de exposição de fotos e vídeos. Teremos oficinas práticas e muito mais para você abranger seu conhecimento oftalmológico, então venha participar do COFAM.</p>
+            <h1>Sobre Cofam: </h1>
+            <p>O Congresso de Oftalmologia para Acadêmicos de Medicina (COFAM) está realizando sua segunda edição no ano de 2025. Esse é um evento criado pela LIOF em 2024, feito para acadêmicos conseguirem apresentar relatos de caso, revisões literários, temas livres além de exposição de fotos e vídeos. Teremos oficinas práticas e muito mais para você abranger seu conhecimento oftalmológico, então venha participar do COFAM.</p>
         </div>
     </section>
 
@@ -36,10 +38,6 @@
             <p>Teremos um workshop para realização de procedimentos cirúrgicos, vamos adiantar e aprender antes da residência?</p>
         </div>
         <div class="fotos_box">
-            <img src="assets\img\fotos4.jpeg" alt="">
-            <p>Teremos uma aula com vagas limitadas sobre mecanismos de ação de colírios e melhores indicações de uso, aonde será disponibilizada um almoço para os congressistas. </p>
-        </div>
-        <div class="fotos_box">
             <img src="assets\img\fotos5.jpg" alt="">
             <p>Serão disponibilizados vários brindes durante o congresso e muito mais, não perca a oportunidade e se inscreva no COFAM!</p>
         </div>
@@ -49,7 +47,7 @@
         <div class="countdown-title">Certificados</div>
         <label for="fileSelect">Selecione o nome para baixar o certificado:</label>
         <select id="fileSelect" >
-            <option>Selecione o seu nome</option>
+            <option value="">Selecione o seu nome para certificado 2024</option>
             <option value="Afonso Marques.pdf">Afonso Marques</option>
             <option value="Alexandre Haida.pdf">Alexandre Haida</option>
             <option value="Alexandre Machado.pdf">Alexandre Machado</option>
@@ -146,6 +144,10 @@
             <option value="Vitor Kotelok Marquezoni.pdf">Vitor Kotelok Marquezoni</option>
             <option value="Vitória de Paula Santos.pdf">Vitória de Paula Santos</option>
         </select>
+        <select id="fileSelect2025">
+            <option value="">Selecione o seu nome para certificado 2025</option>
+        </select>
+
         <button id="downloadBtn">Download</button>
     </div>
 
@@ -163,17 +165,9 @@
             <img src="assets\img\patrocinador2.jpeg" alt="">
             <img src="assets\img\patrocinador3.jpeg" alt="">
             <img src="assets\img\patrocinador4.jpeg" alt="">
-            <img src="assets\img\patrocinador5.jpeg" alt="">
+            <img src="assets\img\patrocinador5.png" alt="">
             <img src="assets\img\patrocinador6.jpg" alt="">
-            <img src="assets\img\patrocinador7.png" alt="">
             <img src="assets\img\patrocinador8.jpeg" alt="">
-        </div>
-        <h2>Apoiadores</h2>
-        <div class="apoiadores">
-            <img src="assets\img\apoiador1.png" alt="">
-            <img src="assets\img\apoiador2.jpg" alt="">
-            <img src="assets\img\apoiador3.jpeg" alt="">
-            <img src="assets\img\apoiador4.png" alt="">
         </div>
     </section>
 
@@ -191,21 +185,30 @@
     
 
     <script>
-        document.getElementById('downloadBtn').addEventListener('click', function () {
-            const select = document.getElementById('fileSelect');
-            const selectedFile = select.value;
+    document.getElementById('downloadBtn').addEventListener('click', function () {
+    const select2024 = document.getElementById('fileSelect');
+    const select2025 = document.getElementById('fileSelect2025');
 
-            // Create a hidden anchor element for downloading
-            const link = document.createElement('a');
-            link.href = `assets/certificados/${selectedFile}`; // Replace with your file path
-            link.download = selectedFile; // Set the file name for download
-            link.style.display = 'none';
+    let selectedFile = "";
 
-            // Append the anchor to the body, trigger the download, and remove it
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
+    if (select2024.value && select2024.value !== "Selecione o seu nome") {
+        selectedFile = select2024.value;
+    } else if (select2025.value && select2025.value !== "Selecione seu nome") {
+        selectedFile = select2025.value;
+    }
+
+    if (selectedFile) {
+        const link = document.createElement('a');
+        link.href = `assets/certificados/${selectedFile}`;
+        link.download = selectedFile;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    } else {
+        alert("Selecione um nome antes de baixar o certificado!");
+    }
+});
+
     </script>
 </body>
 </html>
