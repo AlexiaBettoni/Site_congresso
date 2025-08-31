@@ -28,6 +28,7 @@ a{
 a:visited {
     color: inherit; 
   }
+
 /*--------------------- header ---------------------*/
 header {
     background-color: var(--white);
@@ -40,35 +41,102 @@ header {
     width: auto;
 }
 
-.logo2 {
-    height: 150px;   /* define a altura desejada */
-    width: auto;     /* mantém a proporção */
+
+.countdown {
+    background: white;
+    color: #000;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+.countdown span {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 5px;
+    color: #004aad;
+}
+
+.countdown small {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+}
 
 
 /*--------------------- hero ---------------------*/
-.hero {
-    background: linear-gradient(to right, var(--third), #adc3ff24, var(--third));
-    padding: 30px 0;
-    text-align: center;
+.Banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/img/logo2.jpeg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    padding: 30px 10vw;
+    text-align: left;
     display: flex;
+    justify-content: left;
+    z-index: 1;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
     justify-content: center;
 }
-
-.hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: var(--bluetext);
+.Banner h1 {
+    font-size: 4em;
+    margin: 0;
+    color: var(--white);
+}
+.Banner h3 {
+    font-size: 2em;
+    margin: 0;
+    color: var(--white);
+}
+.Banner h5 {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin: 0;
+    color: var(--white);
 }
 
-.hero p {
-    font-size: 1em;
-    font-weight: 400;
-    margin-bottom: 40px;
-    max-width: 500px;
+/*--------------------countdown--------------------*/
+.topo{
+    position: relative;
+}
+.Countdown{
+    z-index: 2;
+    margin: 0 10vw;
+    position: absolute; 
+    top: 50vh;
+    width: -webkit-fill-available;
+}
+ .countdown {
+    background: var(--white);
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 12px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.countdown div {
     text-align: center;
-    color: var(--bluetext);
+}
+
+.countdown span {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    color: #004aad;
+}
+
+.countdown small {
+    font-size: 0.9rem;
 }
 
 /*--------------------- botoes ---------------------*/
