@@ -9,7 +9,7 @@
   --background: #f5f6f9;
   --primary: #4a69c3;
   --secondary: #8da6eb;
-  --third: #e0e8fc;
+  --third: #e0ebf5;
   --accent: #6782d3;
 }
 
@@ -80,8 +80,8 @@ header {
   position: absolute;
   top: 50vh;
   z-index: 2;
-  left: 50%;        /* posiciona no meio */
-  transform: translateX(-50%); /* centraliza horizontal */
+  left: 50%;
+  transform: translateX(-50%);
 }
 .countdown {
   background: var(--white);
@@ -237,8 +237,26 @@ footer a {
   color: var(--background);
   margin: 2px 0;
 }
+.idealizado{
+  display: flex;
+  align-items: center;
+}
 
 /* ================= RESPONSIVIDADE ================= */
+@media (max-width: 1270px) {
+  .countdown {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+  .countdown span {
+    font-size: 1.8rem;
+  }
+  .countdown .timer{
+    margin: 0;
+    margin-top: 6px;
+  }
+}
+
 @media (max-width: 800px) {
   .Banner h1 {
     font-size: 2.8em;
@@ -252,12 +270,18 @@ footer a {
 
   .Countdown {
     margin: 0 5vw;
+    transform: translateX(-55%);
   }
   .countdown {
-    padding: 15px 30px;
+    flex-direction: column;
+    padding: 15px 20px;
   }
   .countdown span {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+  .countdown .timer{
+    margin: 0;
+    margin-top: 6px;
   }
 
   .saiba_mais,
@@ -284,6 +308,6 @@ footer a {
     text-align: center;
   }
   footer img {
-    width: 45px;
+    width: 60px;
   }
 }

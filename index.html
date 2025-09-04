@@ -115,7 +115,7 @@
 
   <!-- ================= FOOTER ================= -->
   <footer>
-    <div>
+    <div class="idealizado">
       <h4>Idealizado por:</h4>
       <img src="assets/img/liof.jpeg" alt="Logo da LIOF">
     </div>
@@ -128,8 +128,8 @@
       </a>
     </div>
   </footer>
+
   <script>
-    // Defina a data do evento
     const eventDate = new Date("November 11, 2025 08:00:00").getTime();
 
     function updateCountdown() {
@@ -142,21 +142,18 @@
             return;
         }
 
-        // Cálculos de dias, horas e minutos
         const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
         const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
 
-        // Atualiza os elementos do HTML
         document.getElementById("days").textContent = days;
         document.getElementById("hours").textContent = hours;
         document.getElementById("minutes").textContent = minutes;
     }
 
-    // Atualiza a cada 1 minuto (60.000 ms)
     const timerInterval = setInterval(updateCountdown, 60000);
-    updateCountdown(); // executa imediatamente ao carregar
-    </script>
+    updateCountdown();
+  </script>
 
 </body>
 </html>
