@@ -1,116 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cofam</title>
-    <link rel="icon" href="assets\img\logo.png">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COFAM 2025</title>
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <img src="assets\img\logo.png" alt="Logo do congresso" class="logo">
-        
 
-    </header>
+  <!-- ================= HEADER ================= -->
+  <header>
+    <img src="assets/img/logo.png" alt="Logo do congresso" class="logo">
+  </header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <h1>Sobre Cofam: </h1>
-            <p>O Congresso de Oftalmologia para Acadêmicos de Medicina (COFAM) está realizando sua segunda edição no ano de 2025. Esse é um evento criado pela LIOF em 2024, feito para acadêmicos conseguirem apresentar relatos de caso, revisões literários, temas livres além de exposição de fotos e vídeos. Teremos oficinas práticas e muito mais para você abranger seu conhecimento oftalmológico, então venha participar do COFAM.</p>
-        </div>
+  <!-- ================= HERO ================= -->
+  <div class="topo">
+    <section class="Banner">
+      <div class="container">
+        <h3>Congresso de</h3>
+        <h1>Oftalmologia</h1>
+        <h5>para acadêmicos de medicina</h5>
+      </div>
     </section>
 
-    <!-- Fotos -->
-    <section class="fotos">
-        <div class="fotos_box">
-            <img src="assets\img\fotos1.jpeg" alt="">
-            <p>O COFAM será realizado na <a href="https://maps.app.goo.gl/ce5JnjjnRXZE8Vuw7" target="_blank">Associação Médica do Paraná (AMP)</a> um dos locais mais prestigiados de eventos cinéticos em Curitiba.</p>
+    <!-- Countdown -->
+    <section class="Countdown">
+      <div class="countdown" id="countdown">
+        <p>Não perca a COFAM 2025!</p>
+        <div class="timer">
+          <span id="days">0</span><p>Dias</p>
+          <span id="hours">0</span><p>Horas</p>
+          <span id="minutes">0</span><p>Minutos</p>
         </div>
-        <div class="fotos_box">
-            <img src="assets\img\fotos2.jpeg" alt="">
-            <p>Teremos uma oficina prática para aprender a realizar fundo de olho com o eyer 1 da Phelcom, vamos descomplicar a oftalmologia?</p>
-        </div>
-        <div class="fotos_box">
-            <img src="assets\img\fotos3.jpeg" alt="">
-            <p>Teremos um workshop para realização de procedimentos cirúrgicos, vamos adiantar e aprender antes da residência?</p>
-        </div>
-        <div class="fotos_box">
-            <img src="assets\img\fotos5.jpg" alt="">
-            <p>Serão disponibilizados vários brindes durante o congresso e muito mais, não perca a oportunidade e se inscreva no COFAM!</p>
-        </div>
+      </div>
     </section>
+  </div>
 
-    <!--<div class="countdown-section">
-        <div class="countdown-title">Certificados</div>
-        <label for="fileSelect">Selecione o nome para baixar o certificado:</label>
-        <select id="fileSelect2025">
-            <option value="">Selecione o seu nome para certificado 2025</option>
-        </select>
+  <!-- ================= INTRO ================= -->
+  <section class="intro">
+    <p>
+      O Congresso de Oftalmologia para Acadêmicos de Medicina (COFAM) está realizando sua segunda edição no ano de 2025.
+      Esse é um evento criado pela LIOF em 2024, feito para acadêmicos conseguirem apresentar relatos de caso, revisões
+      literárias, temas livres além de exposição de fotos e vídeos. Teremos oficinas práticas e muito mais para você
+      abranger seu conhecimento oftalmológico, então venha participar do COFAM.
+    </p>
+  </section>
 
-        <button id="downloadBtn">Download</button>
-    </div>-->
+  <!-- ================= SAIBA MAIS ================= -->
+  <section class="saiba_mais">
+    <img src="assets/img/cofam_2024_4.jpeg" alt="Imagem ilustrativa do congresso">
+    <div>
+      <h2>Workshops, Oficinas e mais esperam por você!</h2>
+      <p>
+        O <b>COFAM</b> será realizado na <b>Associação Médica do Paraná (AMP)</b>, um dos locais mais prestigiados para
+        eventos científicos em Curitiba, proporcionando uma ótima estrutura para vivenciar todas as experiências do
+        congresso.
+      </p>
+      <p>
+        Durante o evento, os participantes terão a oportunidade de aproveitar <b>diversos brindes</b>, além de atividades
+        exclusivas como um <b>workshop de procedimentos cirúrgicos</b> — uma chance incrível de aprender antes mesmo da
+        residência. Também haverá uma <b>oficina prática de fundo de olho com o Eyer 1 da Phelcom</b>, tornando a
+        oftalmologia ainda mais acessível e descomplicada.
+      </p>
+      <p>Não perca essa oportunidade e garanta já a sua inscrição!</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfiZfkiqHAvUkz6G0ScMm3gYV7g_ld42W0yL8pVPFcWRKgtKA/viewform?usp=dialog"
+         target="_blank" class="btn-link dark">
+        Inscreva-se já
+        <span class="material-symbols-outlined">arrow_outward</span>
+      </a>
+    </div>
+  </section>
 
-    <section class="botoes">
-        <a href="assets\edital2025.pdf" target="_blank"><button>Edital</button></a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfiZfkiqHAvUkz6G0ScMm3gYV7g_ld42W0yL8pVPFcWRKgtKA/viewform" target="_blank"><button>Inscrição </button></a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwpjOl-pFs53vmWIf7NXws37fzE1mZ6jWsg9TSzlOhpCTP6w/viewform" target="_blank"><button>Inscrição de trabalhos</button></a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfyWqC31fq0o6VTyJcD458nIj5KwBAqs2MDsrIJtK9a9dTYNg/viewform" target="_blank"><button>Inscrição fotos e videos</button></a>
-    </section>
-    
-    <section class="patrocinio">
-        <h2>Patrocinadores</h2>
-        <div class="patrocinadores">
-            <img src="assets\img\patrocinador1.jpeg" alt="">
-            <img src="assets\img\patrocinador2.jpeg" alt="">
-            <img src="assets\img\patrocinador3.jpeg" alt="">
-            <img src="assets\img\patrocinador4.jpeg" alt="">
-            <img src="assets\img\patrocinador5.png" alt="">
-            <img src="assets\img\patrocinador6.jpg" alt="">
-            <img src="assets\img\patrocinador8.jpeg" alt="">
-        </div>
-    </section>
+  <!-- ================= SUBMISSÕES ================= -->
+  <section class="submissoes">
+    <div class="info">
+      <h2>Não perca a chance de mostrar seu trabalho na COFAM 2025</h2>
+      <p>
+        O COFAM é o espaço ideal para dar visibilidade aos seus casos e pesquisas. Submeter seu trabalho é uma forma de
+        compartilhar conhecimento e trocar experiências. Mostre seu potencial e faça parte dessa construção científica.
+      </p>
+      <div class="links">
+        <a href="assets/edital2025.pdf" target="_blank" class="btn-link">
+          Confira o Edital 
+          <span class="material-symbols-outlined">arrow_outward</span>
+        </a>    
+        <a href="https://forms.gle/XRrGyyHnGCBf2nY79" target="_blank" class="btn-link">
+          Inscrição de trabalhos
+          <span class="material-symbols-outlined">arrow_outward</span>
+        </a>   
+        <a href="https://forms.gle/6wtYPtSL78RGwgxr8" target="_blank" class="btn-link">
+          Inscrição de fotos e vídeos
+          <span class="material-symbols-outlined">arrow_outward</span>
+        </a>  
+      </div>           
+    </div>
+    <img src="assets/img/cofam_2024_1.jpeg" alt="Imagem de apresentação de trabalhos">
+  </section>
+  
+  <!-- ================= PATROCINADORES ================= -->
+  <section class="patrocinio">
+    <h2>Patrocinadores</h2>
+    <div class="patrocinadores">
+      <img src="assets/img/patrocinador1.jpeg" alt="Patrocinador 1">
+      <img src="assets/img/patrocinador2.jpeg" alt="Patrocinador 2">
+      <img src="assets/img/patrocinador3.jpeg" alt="Patrocinador 3">
+      <img src="assets/img/patrocinador4.jpeg" alt="Patrocinador 4">
+      <img src="assets/img/patrocinador5.png" alt="Patrocinador 5">
+      <img src="assets/img/patrocinador6.jpg" alt="Patrocinador 6">
+      <img src="assets/img/patrocinador8.jpeg" alt="Patrocinador 7">
+    </div>
+  </section>
 
-    <footer>
-        <div>
-            <h4>Idealizado por:</h4>
-            <img src="assets\img\liof.jpeg" alt="">
-        </div>
-        
-        <div>
-            <a href="https://www.instagram.com/cofamcwb?igsh=aXlqdXJoNzR5bzVn" target="_blank"><b>Instagram cofam: </b> @cofamcwb </a>
-            <a href="https://www.instagram.com/liofcuritiba?igsh=MTRyZ2E5NHB2N3luNg==" target="_blank"><b>Instagram Liof:</b> @liofcuritiba </a>
-        </div>
-    </footer>
-    
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="idealizado">
+      <h4>Idealizado por:</h4>
+      <img src="assets/img/liof.jpeg" alt="Logo da LIOF">
+    </div>
+    <div>
+      <a href="https://www.instagram.com/cofamcwb?igsh=aXlqdXJoNzR5bzVn" target="_blank">
+        Instagram COFAM: @cofamcwb
+      </a>
+      <a href="https://www.instagram.com/liofcuritiba?igsh=MTRyZ2E5NHB2N3luNg==" target="_blank">
+        Instagram LIOF: @liofcuritiba
+      </a>
+    </div>
+  </footer>
 
-    <script>
-    document.getElementById('downloadBtn').addEventListener('click', function () {
-    const select2024 = document.getElementById('fileSelect');
-    const select2025 = document.getElementById('fileSelect2025');
+  <script>
+    const eventDate = new Date("November 11, 2025 08:00:00").getTime();
 
-    let selectedFile = "";
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeLeft = eventDate - now;
 
-    if (select2024.value && select2024.value !== "Selecione o seu nome") {
-        selectedFile = select2024.value;
-    } else if (select2025.value && select2025.value !== "Selecione seu nome") {
-        selectedFile = select2025.value;
+        if (timeLeft <= 0) {
+            document.getElementById("countdown").innerHTML = "<p>O evento já começou!</p>";
+            clearInterval(timerInterval);
+            return;
+        }
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
     }
 
-    if (selectedFile) {
-        const link = document.createElement('a');
-        link.href = `assets/certificados/${selectedFile}`;
-        link.download = selectedFile;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    } else {
-        alert("Selecione um nome antes de baixar o certificado!");
-    }
-});
+    const timerInterval = setInterval(updateCountdown, 60000);
+    updateCountdown();
+  </script>
 
-    </script>
 </body>
 </html>
