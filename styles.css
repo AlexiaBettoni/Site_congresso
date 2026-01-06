@@ -144,7 +144,9 @@ header {
   justify-content: center;
   background-color: var(--bluetext);
   color: var(--background);
-  gap: 50px;
+  gap: 40px;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 .submissoes p {
   max-width: 700px;
@@ -152,6 +154,12 @@ header {
 .submissoes img {
   max-width: 30vw;
   object-fit: contain;
+}
+.selectCertificado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
 /* ================= LINKS / BOTÕES ================= */
@@ -177,12 +185,48 @@ header {
   color: var(--bluetext);
   border-bottom-color: var(--bluetext);
 }
+.btn-link.disabled {
+  display: none;
+}
 .btn-link .material-symbols-outlined {
   font-size: 20px;
   transition: transform 0.3s ease;
 }
 .btn-link:hover .material-symbols-outlined {
   transform: translateX(4px);
+}
+
+label{
+  font-weight: 500;
+  font-size: 18px;
+}
+/* Estilo do Select para parecer o botão */
+.select-estilizado {
+  appearance: none; /* Remove o estilo padrão do sistema (seta cinza, bordas 3D) */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--white); /* A linha branca embaixo */
+  color: var(--white);
+  
+  padding: 5px 25px 5px 0;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0;
+  
+  background-image: url("assets/img/keyboard_arrow_down.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 12px;
+}
+
+.select-estilizado option {
+  background-color: var(--hero);
+  color: var(--white);
+  padding: 20px;
 }
 
 /* ================= PATROCINADORES ================= */

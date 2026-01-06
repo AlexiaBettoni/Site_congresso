@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
+
 <body>
 
   <!-- ================= HEADER ================= -->
@@ -30,9 +32,12 @@
       <div class="countdown" id="countdown">
         <p>Não perca a COFAM 2025!</p>
         <div class="timer">
-          <span id="days">0</span><p>Dias</p>
-          <span id="hours">0</span><p>Horas</p>
-          <span id="minutes">0</span><p>Minutos</p>
+          <span id="days">0</span>
+          <p>Dias</p>
+          <span id="hours">0</span>
+          <p>Horas</p>
+          <span id="minutes">0</span>
+          <p>Minutos</p>
         </div>
       </div>
     </section>
@@ -59,14 +64,15 @@
         congresso.
       </p>
       <p>
-        Durante o evento, os participantes terão a oportunidade de aproveitar <b>diversos brindes</b>, além de atividades
+        Durante o evento, os participantes terão a oportunidade de aproveitar <b>diversos brindes</b>, além de
+        atividades
         exclusivas como um <b>workshop de procedimentos cirúrgicos</b> — uma chance incrível de aprender antes mesmo da
         residência. Também haverá uma <b>oficina prática de fundo de olho com o Eyer 1 da Phelcom</b>, tornando a
         oftalmologia ainda mais acessível e descomplicada.
       </p>
       <p>Não perca essa oportunidade e garanta já a sua inscrição!</p>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfiZfkiqHAvUkz6G0ScMm3gYV7g_ld42W0yL8pVPFcWRKgtKA/viewform?usp=dialog"
-         target="_blank" class="btn-link dark">
+        target="_blank" class="btn-link dark">
         Inscreva-se já
         <span class="material-symbols-outlined">arrow_outward</span>
       </a>
@@ -75,30 +81,280 @@
 
   <!-- ================= SUBMISSÕES ================= -->
   <section class="submissoes">
-    <div class="info">
-      <h2>Não perca a chance de mostrar seu trabalho na COFAM 2025</h2>
-      <p>
-        O COFAM é o espaço ideal para dar visibilidade aos seus casos e pesquisas. Submeter seu trabalho é uma forma de
-        compartilhar conhecimento e trocar experiências. Mostre seu potencial e faça parte dessa construção científica.
-      </p>
-      <div class="links">
-        <a href="assets/edital2025.pdf" target="_blank" class="btn-link">
-          Confira o Edital 
-          <span class="material-symbols-outlined">arrow_outward</span>
-        </a>    
-        <a href="https://forms.gle/6wtYPtSL78RGwgxr8" target="_blank" class="btn-link">
-          Inscrição de fotos e vídeos
-          <span class="material-symbols-outlined">arrow_outward</span>
-        </a>
-        <a href="assets\workshops_25.pdf" target="_blank" class="btn-link">
-          Horários workshop
-          <span class="material-symbols-outlined">arrow_outward</span>
-        </a>     
-      </div>           
+    <h3>Baixe o seu certificado da COFAM 2025</h3>
+
+    <div class="selectCertificado">
+      <label for="tipo">Tipo de certificado:</label>
+    <select id="tipo" class="select-estilizado">
+      <option value="">Selecione um tipo</option>
+      <option value="apresentacao">Apresentação</option>
+      <option value="banca">Banca Avaliadora</option>
+      <option value="comissao">Comissão Organizadora</option>
+      <option value="palestra">Palestras</option>
+      <option value="participante">Participantes</option>
+      <option value="trabalho">Trabalhos</option>
+      <option value="workshop">Workshops</option>
+    </select>
     </div>
-    <img src="assets/img/cofam_2024_1.jpeg" alt="Imagem de apresentação de trabalhos">
+    
+
+    <div class="selectCertificado">
+      <label for="item">Selecione o certificado:</label>
+    <select id="item" class="select-estilizado" disabled>
+      <option value="">Selecione o certificado</option>
+    </select>
+    </div>
+    
+
+    <a href="" target="_blank" class="btn-link disabled" id = "baixarCertificado">
+        Baixar certificado
+        <span class="material-symbols-outlined">arrow_outward</span>
+    </a>
   </section>
-  
+
+  <script>
+    const dadosItens = {
+      apresentacao: [
+        "assets/certificados/apresentaçao/Mariana Filipak Machado.pdf",
+        "assets/certificados/apresentaçao/Alexandre Fontoura Chiessorin.pdf",
+        "assets/certificados/apresentaçao/Ana Letícia Pereira Machado.pdf",
+        "assets/certificados/apresentaçao/Beatriz Panka Archegas.pdf",
+        "assets/certificados/apresentaçao/Bruna Maciel.pdf",
+        "assets/certificados/apresentaçao/Júlia Mallmann Monteiro.pdf",
+        "assets/certificados/apresentaçao/Laura Medeiros D’Ambroso.pdf",
+        "assets/certificados/apresentaçao/Laura Rodrigues Galvão.pdf",
+        "assets/certificados/apresentaçao/Luiza Cuiti.pdf"
+      ],
+      banca: [
+        "assets/certificados/banca/Dra. Lazara Maciel.pdf",
+        "assets/certificados/banca/Dra. Dani Coutinho.pdf",
+        "assets/certificados/banca/Dra. Ana Antunes.pdf",
+        "assets/certificados/banca/Dr. Thais Bettega.pdf",
+        "assets/certificados/banca/Dr. Thiago Meister.pdf",
+        "assets/certificados/banca/Dr. Michel Rubim.pdf",
+        "assets/certificados/banca/Dr. Josmar Sabage.pdf",
+        "assets/certificados/banca/Dr. Hugo Itikawa.pdf",
+        "assets/certificados/banca/Dr. Fernando Cotlinski.pdf",
+        "assets/certificados/banca/Dr. Carlos Moreira Neto.pdf"
+      ],
+      comissao: [
+        "assets/certificados/comissao organizadora/Richam Gaze Hajar.pdf",
+        "assets/certificados/comissao organizadora/Rafaela Moreira de Oliveira.pdf",
+        "assets/certificados/comissao organizadora/Pedro Antonio Antunes.pdf",
+        "assets/certificados/comissao organizadora/Murilo Sales Silveira.pdf",
+        "assets/certificados/comissao organizadora/Miguel Simões Lopes.pdf",
+        "assets/certificados/comissao organizadora/Mariana Pasqualin.pdf",
+        "assets/certificados/comissao organizadora/Mahala Salem.pdf",
+        "assets/certificados/comissao organizadora/Luiz Otavio Antunes.pdf",
+        "assets/certificados/comissao organizadora/Lucas Slivak Petroski.pdf",
+        "assets/certificados/comissao organizadora/Lucas de Souza Petrini.pdf",
+        "assets/certificados/comissao organizadora/Luan de Ronald Paini.pdf",
+        "assets/certificados/comissao organizadora/Laura Cecília Ferronato.pdf",
+        "assets/certificados/comissao organizadora/Júlia Carolina Resnauer.pdf",
+        "assets/certificados/comissao organizadora/Ivan Araujo Pires.pdf",
+        "assets/certificados/comissao organizadora/Eduardo Lobo da Rosa de Almeida.pdf",
+        "assets/certificados/comissao organizadora/Eduarda Vantroba.pdf",
+        "assets/certificados/comissao organizadora/Beatriz Panka Archegas.pdf",
+        "assets/certificados/comissao organizadora/Beatriz Miwa Matsushita.pdf"
+      ],
+      palestra: [
+        "assets/certificados/palestra/Dra. Thais Bettega Joaquim.pdf",
+        "assets/certificados/palestra/Dra. Rafaela Moreira de Oliveira.pdf",
+        "assets/certificados/palestra/Dra. Rafaela Moreira de Oliveira 2.pdf",
+        "assets/certificados/palestra/Dra. Mariel Monclaro Sanson.pdf",
+        "assets/certificados/palestra/Dra. Luciane Moreira.pdf",
+        "assets/certificados/palestra/Dra. Luciane Moreira 2.pdf",
+        "assets/certificados/palestra/Dra. Lazara Maciel.pdf",
+        "assets/certificados/palestra/Dra. Isabella Pagnussat.pdf",
+        "assets/certificados/palestra/Dra. Helena Gschwendtner.pdf",
+        "assets/certificados/palestra/Dra. Andressa Becker Motta.pdf",
+        "assets/certificados/palestra/Dra. Ana Paula Canto.pdf",
+        "assets/certificados/palestra/Dr. Thiago Meister.pdf",
+        "assets/certificados/palestra/Dr. Richam Gaze Hajar.pdf",
+        "assets/certificados/palestra/Dr. Luiz Eduardo Gonçalves Barros.pdf",
+        "assets/certificados/palestra/Dr. Luís Expedito Sabage.pdf",
+        "assets/certificados/palestra/Dr. Luís Expedito Sabage 2.pdf",
+        "assets/certificados/palestra/Dr. Henrique Echeverria.pdf",
+        "assets/certificados/palestra/Dr. Gabriel Hilgert.pdf",
+        "assets/certificados/palestra/Dr. Fernando Cotlinski.pdf",
+        "assets/certificados/palestra/Dr. Eric Koja Azuma Watanabe.pdf",
+        "assets/certificados/palestra/Dr. Carlos Augusto Moreira Neto.pdf"
+      ],
+      participante: [
+        "assets/certificados/participantes/Yasmim Gerstemberger Bahi.pdf",
+        "assets/certificados/participantes/Vitor Kotelok Marquezoni.pdf",
+        "assets/certificados/participantes/Vinicius Trevisol.pdf",
+        "assets/certificados/participantes/Valentina Vicente Antunes.pdf",
+        "assets/certificados/participantes/Simone Solange de Lima Almeida.pdf",
+        "assets/certificados/participantes/Rubia Nara Alves Ramos.pdf",
+        "assets/certificados/participantes/Renata Nadal Bayer.pdf",
+        "assets/certificados/participantes/Rafaela Hack Ruthes.pdf",
+        "assets/certificados/participantes/Pedro Piazza Schmidt.pdf",
+        "assets/certificados/participantes/Pedro Antonio Antunes.pdf",
+        "assets/certificados/participantes/Patrícia deMorais Della Justina.pdf",
+        "assets/certificados/participantes/Pamela Suelen Vicente.pdf",
+        "assets/certificados/participantes/Nicole Pereira Guimarães.pdf",
+        "assets/certificados/participantes/Nayara Cristine HermesMonteiro.pdf",
+        "assets/certificados/participantes/Nathalie da Silva Camargo.pdf",
+        "assets/certificados/participantes/Natália Carvalho Van Linschoten Lazzari.pdf",
+        "assets/certificados/participantes/Mohamed Hajar.pdf",
+        "assets/certificados/participantes/Melissa Nicolle Coutinho de Oliveira.pdf",
+        "assets/certificados/participantes/Matheus Demétrio Naberisney Rocha.pdf",
+        "assets/certificados/participantes/Mateus de Souza Petrini.pdf",
+        "assets/certificados/participantes/Mariana Yoshie Okimura.pdf",
+        "assets/certificados/participantes/Mariana Natali Moro.pdf",
+        "assets/certificados/participantes/Mariana Filipak Machado.pdf",
+        "assets/certificados/participantes/Maria Victória Moreira da Costa de Menezes.pdf",
+        "assets/certificados/participantes/Maria Eduarda Soares Bizinelli.pdf",
+        "assets/certificados/participantes/Luiza Curti.pdf",
+        "assets/certificados/participantes/Luiz Otavio Antunes.pdf",
+        "assets/certificados/participantes/Luiz Enrique Paloschi.pdf",
+        "assets/certificados/participantes/Lucas Fontana Lima França.pdf",
+        "assets/certificados/participantes/Luan de Ronald Pain.pdf",
+        "assets/certificados/participantes/Leonardo Bottcher.pdf",
+        "assets/certificados/participantes/LauraMaria de Moura e Costa.pdf",
+        "assets/certificados/participantes/Laura Rodrigues Galvão.pdf",
+        "assets/certificados/participantes/Laura Medeiros D’Ambroso.pdf",
+        "assets/certificados/participantes/Larissa Kotovicz Collaço.pdf",
+        "assets/certificados/participantes/Larissa de Camargo Zawadzki.pdf",
+        "assets/certificados/participantes/Júlio Antonio Moraes de Almeida.pdf",
+        "assets/certificados/participantes/Julia Mallmann Monteiro.pdf",
+        "assets/certificados/participantes/Jose Vitor Rigon.pdf",
+        "assets/certificados/participantes/João Victor Rigatti da Luz.pdf",
+        "assets/certificados/participantes/João Victor Lefko Rudek.pdf",
+        "assets/certificados/participantes/Izabele de Azevedo.pdf",
+        "assets/certificados/participantes/Ivan Araujo Pires.pdf",
+        "assets/certificados/participantes/Isadora Mansur Castro.pdf",
+        "assets/certificados/participantes/Isabella Rodrigues Santos.pdf",
+        "assets/certificados/participantes/Isabela Luísa Moreira.pdf",
+        "assets/certificados/participantes/Heloisa Tedesco Correia.pdf",
+        "assets/certificados/participantes/Heloisa Stadler Ribas.pdf",
+        "assets/certificados/participantes/Guilherme Moravieski Uliana.pdf",
+        "assets/certificados/participantes/Guilherme Marçal Ferreira Lima.pdf",
+        "assets/certificados/participantes/Giulia Gabrielle de Oliveira Moreira.pdf",
+        "assets/certificados/participantes/Gabriela Strapasson Ramos.pdf",
+        "assets/certificados/participantes/Gabriel Vivan Portes.pdf",
+        "assets/certificados/participantes/Gabriel Siqueira Hanke.pdf",
+        "assets/certificados/participantes/Gabriel de Souza Petrini.pdf",
+        "assets/certificados/participantes/Flávia da CostaMarques.pdf",
+        "assets/certificados/participantes/Felipe Gonçalves Pelegrino.pdf",
+        "assets/certificados/participantes/ENRICO GALLI PINHO.pdf",
+        "assets/certificados/participantes/Eduardo Valério Rodrigues.pdf",
+        "assets/certificados/participantes/Eduardo Rafael Ferreira Lima.pdf",
+        "assets/certificados/participantes/Eduardo Puquevicz Strassmann.pdf",
+        "assets/certificados/participantes/Eduardo Henrique Thiem.pdf",
+        "assets/certificados/participantes/Eduarda Lopes Dias Arroyo.pdf",
+        "assets/certificados/participantes/Caroline Nadvorny Nascimento.pdf",
+        "assets/certificados/participantes/Caio Teixeira de Souza.pdf",
+        "assets/certificados/participantes/Bruna Maciel Zappi.pdf",
+        "assets/certificados/participantes/Breno Eduardo Sobezak Kuceki.pdf",
+        "assets/certificados/participantes/Brenda Marinho Litvinski.pdf",
+        "assets/certificados/participantes/Brenda Bastos de Abreu.pdf",
+        "assets/certificados/participantes/Bianca Cardoso.pdf",
+        "assets/certificados/participantes/Beatriz Stadler Ribas.pdf",
+        "assets/certificados/participantes/Beatriz Panka Archegas.pdf",
+        "assets/certificados/participantes/Beatriz Miwa Matsushita.pdf",
+        "assets/certificados/participantes/Beatriz Mayara Oliveira Castro.pdf",
+        "assets/certificados/participantes/Beatriz de Negreiros Martins.pdf",
+        "assets/certificados/participantes/Ashley Robloski.pdf",
+        "assets/certificados/participantes/Ana Maria Gonçalves Wolter.pdf",
+        "assets/certificados/participantes/Ana Manuela Budaz.pdf",
+        "assets/certificados/participantes/Ana Letícia PedreiroMachado.pdf",
+        "assets/certificados/participantes/Ana Carolina Mendes.pdf",
+        "assets/certificados/participantes/Ana Carolina Kusma.pdf",
+        "assets/certificados/participantes/Amanda Gulin.pdf",
+        "assets/certificados/participantes/Ana Alice Broering Eller.pdf",
+        "assets/certificados/participantes/Alice Rodrigues da Costa.pdf",
+        "assets/certificados/participantes/Alexandre Fontoura Chiesorin.pdf"
+      ],
+      trabalho: [
+        "assets/certificados/trabalho/Vitrectomia pars plana no tratamento da retinopatia diabética.pdf",
+        "assets/certificados/trabalho/Uso excessivo de telas e alterações estruturais - Copia.pdf",
+        "assets/certificados/trabalho/Tumores palpebrais perfil epidemiológico - Copia.pdf",
+        "assets/certificados/trabalho/Terapia genética ocular com voretigene neparvovec (nuxturna) - Copia.pdf",
+        "assets/certificados/trabalho/Técnica de Interlacing no tratamento da esotropia do alto míope - Copia.pdf",
+        "assets/certificados/trabalho/Retinoblastoma bilateral.pdf",
+        "assets/certificados/trabalho/Síndrome de Usher tipo 1 em irmãos completos - Copia.pdf",
+        "assets/certificados/trabalho/Relevância da avaliação oftalmológica no diagnóstico precoce da hipertensão intracraniana - Copia.pdf",
+        "assets/certificados/trabalho/Relato de caso Diagnóstico e tratamento precoce de melanoma de coroide.pdf",
+        "assets/certificados/trabalho/Relação médico paciente de pessoas cegas.pdf",
+        "assets/certificados/trabalho/Prevenção da miopia em crianças e adolescentes Revisão crítica de literatura dos útimos 10 anos.pdf",
+        "assets/certificados/trabalho/Maculopatia fototóxica por exposição a laser - Copia.pdf",
+        "assets/certificados/trabalho/Inteligência artificial móvel na triagem de tumores palpebrais - Copia.pdf",
+        "assets/certificados/trabalho/Influência do tratamento do olho seco com luz intensa pulsada.pdf",
+        "assets/certificados/trabalho/Febre reumática e o uso prolongado de penicilina benzatina.pdf",
+        "assets/certificados/trabalho/Enucleação por melanoma de coroide.pdf",
+        "assets/certificados/trabalho/Doença de Stargartd em adulto jovem com sintomas iniciais atípicos.pdf",
+        "assets/certificados/trabalho/Desafios para a doação de córneas no Brasil - Copia.pdf",
+        "assets/certificados/trabalho/Análise comparativa desempenho diagnóstico da inteligência artificial - Copia.pdf",
+        "assets/certificados/trabalho/Amiloidose vítrea associada à mutação do gene TTR.pdf"
+      ],
+      workshop: [
+        "assets/certificados/workshop/Amanda Gulin.pdf",
+        "assets/certificados/workshop/Ana Carolina Kusma.pdf",
+        "assets/certificados/workshop/Ana Carolina Mendes.pdf",
+        "assets/certificados/workshop/Ana Manuela Budaz.pdf",
+        "assets/certificados/workshop/Beatriz de Negreiros Martins.pdf",
+        "assets/certificados/workshop/Bianca Cardoso.pdf",
+        "assets/certificados/workshop/Brenda Marinho Litvinski.pdf",
+        "assets/certificados/workshop/Bruna Maciel Zappi.pdf",
+        "assets/certificados/workshop/Enrico Galli Pinho.pdf",
+        "assets/certificados/workshop/Flávia da Costa Marques.pdf",
+        "assets/certificados/workshop/Gabriel de Souza Petrini.pdf",
+        "assets/certificados/workshop/Giulia Gabrielle de Oliveira Moreira.pdf",
+        "assets/certificados/workshop/Gabriel Siqueira Hanke.pdf",
+        "assets/certificados/workshop/Guilherme Moravieski Uliana.pdf",
+        "assets/certificados/workshop/Heloisa Tedesco Correia.pdf",
+        "assets/certificados/workshop/Isabela Luísa Moreira.pdf",
+        "assets/certificados/workshop/Isadora Mansur Castro.pdf",
+        "assets/certificados/workshop/Izabele de Azevedo.pdf",
+        "assets/certificados/workshop/João Victor Lefko Rudek.pdf",
+        "assets/certificados/workshop/João Victor Rigatti da Luz.pdf",
+        "assets/certificados/workshop/Julia Mallmann Monteiro.pdf",
+        "assets/certificados/workshop/Luan de Ronald Paini.pdf",
+        "assets/certificados/workshop/Mariana Natali Moro.pdf",
+        "assets/certificados/workshop/Mateus de Souza Petrini.pdf",
+        "assets/certificados/workshop/Nayara Cristine Hermes Monteiro.pdf",
+        "assets/certificados/workshop/Pamela Suelen Vicente.pdf",
+        "assets/certificados/workshop/Simone Solange de Lima Almeida.pdf"
+      ]
+    };
+
+    const selectCategoria = document.getElementById('tipo');
+    const selectItem = document.getElementById('item');
+    const botaoEnviar = document.getElementById('baixarCertificado');
+
+    selectCategoria.addEventListener('change', function () {
+      const categoriaSelecionada = this.value;
+
+      selectItem.innerHTML = '<option value="">Selecione um item</option>';
+      selectItem.disabled = true;
+
+      if (categoriaSelecionada && dadosItens[categoriaSelecionada]) {
+        const itens = dadosItens[categoriaSelecionada];
+
+        itens.forEach(item => {
+          const opcao = document.createElement('option');
+          opcao.value = item;
+          opcao.textContent = item.split(/[\\/]/).pop().replace(/\.[^/.]+$/, "");
+          selectItem.appendChild(opcao);
+        });
+
+        selectItem.disabled = false;
+      }
+    });
+
+    selectItem.addEventListener('change', function () {
+      if (selectItem.value !== ""){
+        botaoEnviar.href = selectItem.value;
+        botaoEnviar.classList.remove('disabled');
+      } else {
+        botaoEnviar.classList.add('disabled');
+        botaoEnviar.href = "";
+      }
+    });
+  </script>
+
   <!-- ================= PATROCINADORES ================= -->
   <section class="patrocinio">
     <h2>Patrocinadores</h2>
@@ -137,22 +393,22 @@
     const eventDate = new Date("November 22, 2025 08:00:00").getTime();
 
     function updateCountdown() {
-        const now = new Date().getTime();
-        const timeLeft = eventDate - now;
+      const now = new Date().getTime();
+      const timeLeft = eventDate - now;
 
-        if (timeLeft <= 0) {
-            document.getElementById("countdown").innerHTML = "<p>O evento já começou!</p>";
-            clearInterval(timerInterval);
-            return;
-        }
+      if (timeLeft <= 0) {
+        document.getElementById("countdown").innerHTML = "<p>O evento já começou!</p>";
+        clearInterval(timerInterval);
+        return;
+      }
 
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
 
-        document.getElementById("days").textContent = days;
-        document.getElementById("hours").textContent = hours;
-        document.getElementById("minutes").textContent = minutes;
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
     }
 
     const timerInterval = setInterval(updateCountdown, 60000);
@@ -160,4 +416,5 @@
   </script>
 
 </body>
+
 </html>
